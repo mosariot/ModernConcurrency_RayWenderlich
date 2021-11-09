@@ -1,9 +1,0 @@
-version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
-options: "ccb944e6591660fb33f1c68c633a06911f3f25a771fb83c369e694ca8d767828"
-build_start_time: [1636391293, 751806974]
-build_end_time: [1636391293, 888123035]
-inputs:
-  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-backtrace/Sources/Backtrace/Backtrace.swift"
-  : [1636391271, 863706827]
-  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-backtrace/Sources/Backtrace/Demangle.swift"
-  : [1636391271, 863769292]

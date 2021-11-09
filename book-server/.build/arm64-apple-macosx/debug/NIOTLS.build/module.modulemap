@@ -1,4 +1,0 @@
-module NIOTLS {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/NIOTLS.build/NIOTLS-Swift.h"
-    requires objc
-}

@@ -1,6 +1,0 @@
-version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
-options: "5c1d6611439542ca1ed852d9805c06427610479a088bf555c6ee8fbc0a3d3ae8"
-build_start_time: [1636391311, 956696987]
-build_end_time: [1636391312, 242501020]
-inputs:
-  "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/Sources/Run/main.swift": [1635946831, 0]

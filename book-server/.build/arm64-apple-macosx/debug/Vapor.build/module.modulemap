@@ -1,4 +1,0 @@
-module Vapor {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/Vapor.build/Vapor-Swift.h"
-    requires objc
-}

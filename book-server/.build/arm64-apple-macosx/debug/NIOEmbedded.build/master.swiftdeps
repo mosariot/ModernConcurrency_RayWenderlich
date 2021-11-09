@@ -1,7 +1,0 @@
-version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
-options: "16d7dad600fcb7ff2320606f53265fe3d595aa2a55b147bfb23cc3bb0113d567"
-build_start_time: [1636391295, 36322116]
-build_end_time: [1636391295, 529554843]
-inputs:
-  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOEmbedded/Embedded.swift"
-  : [1636391270, 360424995]

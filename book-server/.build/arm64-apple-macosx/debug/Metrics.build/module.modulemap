@@ -1,4 +1,0 @@
-module Metrics {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/Metrics.build/Metrics-Swift.h"
-    requires objc
-}

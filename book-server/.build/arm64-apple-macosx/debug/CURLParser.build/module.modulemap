@@ -1,4 +1,0 @@
-module CURLParser {
-    umbrella "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/CURLParser/include"
-    export *
-}

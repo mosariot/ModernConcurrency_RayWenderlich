@@ -1,4 +1,0 @@
-module Backtrace {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/Backtrace.build/Backtrace-Swift.h"
-    requires objc
-}

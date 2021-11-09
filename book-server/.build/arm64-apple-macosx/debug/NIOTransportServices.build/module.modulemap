@@ -1,4 +1,0 @@
-module NIOTransportServices {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/NIOTransportServices.build/NIOTransportServices-Swift.h"
-    requires objc
-}

@@ -1,4 +1,0 @@
-module NIOExtras {
-    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/NIOExtras.build/NIOExtras-Swift.h"
-    requires objc
-}
