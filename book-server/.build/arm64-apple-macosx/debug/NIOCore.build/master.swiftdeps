@@ -1,0 +1,93 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "16d7dad600fcb7ff2320606f53265fe3d595aa2a55b147bfb23cc3bb0113d567"
+build_start_time: [1636391292, 652832031]
+build_end_time: [1636391294, 981335163]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/AddressedEnvelope.swift"
+  : [1636391270, 354115009]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/AsyncAwaitSupport.swift"
+  : [1636391270, 354200839]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/BSDSocketAPI.swift"
+  : [1636391270, 354298591]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-aux.swift"
+  : [1636391270, 354575157]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-conversions.swift"
+  : [1636391270, 354644060]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-core.swift"
+  : [1636391270, 354997634]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-int.swift"
+  : [1636391270, 355206489]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-lengthPrefix.swift"
+  : [1636391270, 355275630]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ByteBuffer-views.swift"
+  : [1636391270, 355347156]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/Channel.swift"
+  : [1636391270, 355599880]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ChannelHandler.swift"
+  : [1636391270, 355731487]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ChannelHandlers.swift"
+  : [1636391270, 355828046]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ChannelInvoker.swift"
+  : [1636391270, 355921268]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ChannelOption.swift"
+  : [1636391270, 356016874]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ChannelPipeline.swift"
+  : [1636391270, 356251478]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/CircularBuffer.swift"
+  : [1636391270, 356395006]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/Codec.swift"
+  : [1636391270, 356683254]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/ConvenienceOptionSupport.swift"
+  : [1636391270, 356897115]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/DeadChannel.swift"
+  : [1636391270, 356960773]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/DispatchQueue+WithFuture.swift"
+  : [1636391270, 357023239]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/EventLoop.swift"
+  : [1636391270, 357174873]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/EventLoopFuture.swift"
+  : [1636391270, 357528686]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/FileDescriptor.swift"
+  : [1636391270, 357705354]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/FileHandle.swift"
+  : [1636391270, 357885360]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/FileRegion.swift"
+  : [1636391270, 357950210]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/IO.swift"
+  : [1636391270, 358017444]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/IOData.swift"
+  : [1636391270, 358221292]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/IntegerBitPacking.swift"
+  : [1636391270, 358282566]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/IntegerTypes.swift"
+  : [1636391270, 358345985]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/Interfaces.swift"
+  : [1636391270, 358450889]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/Linux.swift"
+  : [1636391270, 358520507]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/MarkedCircularBuffer.swift"
+  : [1636391270, 358583211]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/MulticastChannel.swift"
+  : [1636391270, 358643531]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/NIOAny.swift"
+  : [1636391270, 358732938]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/NIOCloseOnErrorHandler.swift"
+  : [1636391270, 358819961]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/PointerHelpers.swift"
+  : [1636391270, 358873605]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/RecvByteBufferAllocator.swift"
+  : [1636391270, 358939647]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/SingleStepByteToMessageDecoder.swift"
+  : [1636391270, 359034299]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/SocketAddresses.swift"
+  : [1636391270, 359147071]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/SocketOptionProvider.swift"
+  : [1636391270, 359231472]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/SystemCallHelpers.swift"
+  : [1636391270, 359302997]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/TypeAssistedChannelHandler.swift"
+  : [1636391270, 359362602]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/UniversalBootstrapSupport.swift"
+  : [1636391270, 359457015]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio/Sources/NIOCore/Utilities.swift"
+  : [1636391270, 359546184]

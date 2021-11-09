@@ -1,0 +1,29 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "15fcf74aa6cc03d2bafa768baca10d71f32fc6a9a9b2d4ad62e52141a09b8ff8"
+build_start_time: [1636391296, 310911178]
+build_end_time: [1636391297, 615748882]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Channel Handlers/SOCKSClientHandler.swift"
+  : [1636391272, 81447124]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Channel Handlers/SOCKSServerHandshakeHandler.swift"
+  : [1636391272, 81522464]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/AuthenticationMethod.swift"
+  : [1636391272, 81768751]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/ClientGreeting.swift"
+  : [1636391272, 81851005]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/Errors.swift"
+  : [1636391272, 81912040]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/Helpers.swift"
+  : [1636391272, 81976413]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/Messages.swift"
+  : [1636391272, 82077503]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/SOCKSRequest.swift"
+  : [1636391272, 82148075]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/SOCKSResponse.swift"
+  : [1636391272, 82225799]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/Messages/SelectedAuthenticationMethod.swift"
+  : [1636391272, 82304000]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/State/ClientStateMachine.swift"
+  : [1636391272, 82433223]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOSOCKS/State/ServerStateMachine.swift"
+  : [1636391272, 82504749]

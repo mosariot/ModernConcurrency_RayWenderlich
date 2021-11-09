@@ -1,0 +1,4 @@
+module NIOHPACK {
+    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/NIOHPACK.build/NIOHPACK-Swift.h"
+    requires objc
+}

@@ -1,0 +1,387 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "9db0546b71f03b3bbf67abd41dfbc88a2cc621a540b4aa7d4b001cf0de94935e"
+build_start_time: [1636391303, 593211174]
+build_end_time: [1636391309, 580075979]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Application.swift"
+  : [1636391269, 930033206]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/AuthenticationCache.swift"
+  : [1636391269, 930132150]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/Authenticator.swift"
+  : [1636391269, 930200815]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/BasicAuthorization.swift"
+  : [1636391269, 930256366]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/BearerAuthorization.swift"
+  : [1636391269, 930316448]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/GuardMiddleware.swift"
+  : [1636391269, 930376768]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/RedirectMiddleware.swift"
+  : [1636391269, 930432796]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Authentication/SessionAuthenticatable.swift"
+  : [1636391269, 930509567]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Bcrypt/Bcrypt.swift"
+  : [1636391269, 930627822]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Cache/Application+Cache.swift"
+  : [1636391269, 930738925]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Cache/Cache.swift"
+  : [1636391269, 930814027]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Cache/CacheExpirationTime.swift"
+  : [1636391269, 930881500]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Cache/MemoryCache.swift"
+  : [1636391269, 930948257]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Cache/Request+Cache.swift"
+  : [1636391269, 931008577]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Client/Application+Clients.swift"
+  : [1636391269, 931107282]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Client/Client.swift"
+  : [1636391269, 931186914]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Client/ClientRequest.swift"
+  : [1636391269, 931257247]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Client/ClientResponse.swift"
+  : [1636391269, 931329250]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Client/Request+Client.swift"
+  : [1636391269, 931385517]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Commands/BootCommand.swift"
+  : [1636391269, 931489229]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Commands/CommandContext+Application.swift"
+  : [1636391269, 931553840]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Commands/RoutesCommand.swift"
+  : [1636391269, 931632995]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Commands/ServeCommand.swift"
+  : [1636391269, 931703329]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/Content.swift"
+  : [1636391269, 931803464]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/ContentCoders.swift"
+  : [1636391269, 931869983]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/ContentConfiguration.swift"
+  : [1636391269, 931936740]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/ContentContainer.swift"
+  : [1636391269, 932024478]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/JSONCoder+Custom.swift"
+  : [1636391269, 932086706]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/JSONCoders+Content.swift"
+  : [1636391269, 932136058]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/PlaintextDecoder.swift"
+  : [1636391269, 932197093]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/PlaintextEncoder.swift"
+  : [1636391269, 932275056]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/SingleValueDecoder.swift"
+  : [1636391269, 932350635]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/URLQueryCoders.swift"
+  : [1636391269, 932409763]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Content/URLQueryContainer.swift"
+  : [1636391269, 932518005]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Core/Core.swift"
+  : [1636391269, 932623863]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Core/Running.swift"
+  : [1636391269, 932701110]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Deprecations/CORSMiddleware+AllowOriginSetting.swift"
+  : [1636391269, 932792186]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Deprecations/CORSMiddleware+Configuration+exposedHeaders.swift"
+  : [1636391269, 932856559]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Deprecations/DotEnvFile+load.swift"
+  : [1636391269, 932948589]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Deprecations/Routes+caseInsenstive.swift"
+  : [1636391269, 933006763]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Deprecations/Validatable+validate.swift"
+  : [1636391269, 933065176]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Environment/Environment+Process.swift"
+  : [1636391269, 933162212]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Environment/Environment+Secret.swift"
+  : [1636391269, 933236360]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Environment/Environment.swift"
+  : [1636391269, 933311462]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/Abort.swift"
+  : [1636391269, 933422803]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/AbortError.swift"
+  : [1636391269, 933509826]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/DebuggableError.swift"
+  : [1636391269, 933588504]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/Demangler.swift"
+  : [1636391269, 933655738]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/ErrorSource.swift"
+  : [1636391269, 933719873]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Error/StackTrace.swift"
+  : [1636391269, 933796882]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Exports.swift"
+  : [1636391269, 933861017]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Application+HTTP.swift"
+  : [1636391269, 933953762]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/BasicResponder.swift"
+  : [1636391269, 934031009]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/BodyStream.swift"
+  : [1636391269, 934118032]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Client/Application+HTTP+Client.swift"
+  : [1636391269, 934230804]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Client/EventLoopHTTPClient.swift"
+  : [1636391269, 934298992]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/EndpointCache.swift"
+  : [1636391269, 934380292]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/HTTPMethod+String.swift"
+  : [1636391269, 934452533]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/HTTPStatus.swift"
+  : [1636391269, 934514045]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPCookies.swift"
+  : [1636391269, 934653043]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaderCacheControl.swift"
+  : [1636391269, 934753894]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaderExpires.swift"
+  : [1636391269, 934831857]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaderLastModified.swift"
+  : [1636391269, 934895515]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+Cache.swift"
+  : [1636391269, 934957981]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+Connection.swift"
+  : [1636391269, 935024499]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+ContentDisposition.swift"
+  : [1636391269, 935091495]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+ContentRange.swift"
+  : [1636391269, 935166835]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+Directive.swift"
+  : [1636391269, 935256481]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+Forwarded.swift"
+  : [1636391269, 935318946]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders+Name.swift"
+  : [1636391269, 935429573]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPHeaders.swift"
+  : [1636391269, 935495853]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPMediaType.swift"
+  : [1636391269, 935660362]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Headers/HTTPMediaTypePreference.swift"
+  : [1636391269, 935728788]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Responder.swift"
+  : [1636391269, 935775756]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/Application+HTTP+Server.swift"
+  : [1636391269, 935867309]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/HTTPServer.swift"
+  : [1636391269, 935972213]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/HTTPServerHandler.swift"
+  : [1636391269, 936059474]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/HTTPServerRequestDecoder.swift"
+  : [1636391269, 936166048]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/HTTPServerResponseEncoder.swift"
+  : [1636391269, 936254501]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/HTTP/Server/HTTPServerUpgradeHandler.swift"
+  : [1636391269, 936332702]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Logging/Logger+Report.swift"
+  : [1636391269, 936423301]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Logging/LoggingSystem+Environment.swift"
+  : [1636391269, 936486721]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/Application+Middleware.swift"
+  : [1636391269, 936569213]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/CORSMiddleware.swift"
+  : [1636391269, 936641693]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/ErrorMiddleware.swift"
+  : [1636391269, 936700820]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/FileMiddleware.swift"
+  : [1636391269, 936758279]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/Middleware.swift"
+  : [1636391269, 936813831]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/MiddlewareConfiguration.swift"
+  : [1636391269, 936867952]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Middleware/RouteLoggingMiddleware.swift"
+  : [1636391269, 936923027]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Multipart/File+Multipart.swift"
+  : [1636391269, 937008857]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Multipart/FormDataDecoder+Content.swift"
+  : [1636391269, 937071323]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Multipart/FormDataEncoder+Content.swift"
+  : [1636391269, 937128543]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/Application+Password.swift"
+  : [1636391269, 937215805]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/Application+Passwords.swift"
+  : [1636391269, 937271595]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/AsyncPasswordHasher.swift"
+  : [1636391269, 937328577]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/BcryptHasher.swift"
+  : [1636391269, 937379598]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/PasswordHasher.swift"
+  : [1636391269, 937427520]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/PlaintextHasher.swift"
+  : [1636391269, 937479496]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Passwords/Request+Password.swift"
+  : [1636391269, 937529563]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Request/Redirect.swift"
+  : [1636391269, 937612533]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Request/Request+Body.swift"
+  : [1636391269, 937675237]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Request/Request+BodyStream.swift"
+  : [1636391269, 937729597]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Request/Request.swift"
+  : [1636391269, 937809467]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Responder/Application+Responder.swift"
+  : [1636391269, 937897205]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Responder/DefaultResponder.swift"
+  : [1636391269, 937973976]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Response/Response+Body.swift"
+  : [1636391269, 938086032]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Response/Response.swift"
+  : [1636391269, 938172817]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Response/ResponseCodable.swift"
+  : [1636391269, 938236236]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/Application+Routes.swift"
+  : [1636391269, 938327312]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/Parameters+Require.swift"
+  : [1636391269, 938398122]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/Request+WebSocket.swift"
+  : [1636391269, 938454151]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/Route.swift"
+  : [1636391269, 938527822]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RouteCollection.swift"
+  : [1636391269, 938591480]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/Routes.swift"
+  : [1636391269, 938720226]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RoutesBuilder+Group.swift"
+  : [1636391269, 938814163]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RoutesBuilder+Method.swift"
+  : [1636391269, 938895225]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RoutesBuilder+Middleware.swift"
+  : [1636391269, 938973903]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RoutesBuilder+WebSocket.swift"
+  : [1636391269, 939062595]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Routing/RoutesBuilder.swift"
+  : [1636391269, 939124107]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Security/OTP.swift"
+  : [1636391269, 939243078]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Server/Application+Servers.swift"
+  : [1636391269, 939346313]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Server/Server.swift"
+  : [1636391269, 939416885]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/Application+Sessions.swift"
+  : [1636391269, 939566612]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/MemorySessions.swift"
+  : [1636391269, 939650535]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/Request+Session.swift"
+  : [1636391269, 939727067]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/Session.swift"
+  : [1636391269, 939809560]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/SessionCache.swift"
+  : [1636391269, 939871072]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/SessionData.swift"
+  : [1636391269, 939934730]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/SessionDriver.swift"
+  : [1636391269, 940001487]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/SessionsConfiguration.swift"
+  : [1636391269, 940072298]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Sessions/SessionsMiddleware.swift"
+  : [1636391269, 940153598]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/DateFormatter+threadSpecific.swift"
+  : [1636391269, 940282583]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormData.swift"
+  : [1636391269, 940357208]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormDecoder.swift"
+  : [1636391269, 940477609]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormEncoder.swift"
+  : [1636391269, 940591335]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormError.swift"
+  : [1636391269, 940658092]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormParser.swift"
+  : [1636391269, 940748453]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLEncodedFormSerializer.swift"
+  : [1636391269, 940823554]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/URLEncodedForm/URLQueryFragmentConvertible.swift"
+  : [1636391269, 940894126]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/AnyResponse.swift"
+  : [1636391269, 941001415]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Array+Random.swift"
+  : [1636391269, 941078662]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Base32.swift"
+  : [1636391269, 941142082]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Base64.swift"
+  : [1636391269, 941210746]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/BasicCodingKey.swift"
+  : [1636391269, 941275596]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/ByteCount.swift"
+  : [1636391269, 941337108]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Bytes+Hex.swift"
+  : [1636391269, 941406011]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Bytes+SecureCompare.swift"
+  : [1636391269, 941481590]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Collection+Safe.swift"
+  : [1636391269, 941545486]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/DataProtocol+Copy.swift"
+  : [1636391269, 941608905]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/DecoderUnwrapper.swift"
+  : [1636391269, 941668987]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/DirectoryConfiguration.swift"
+  : [1636391269, 941743135]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/DotEnv.swift"
+  : [1636391269, 941806793]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Extendable.swift"
+  : [1636391269, 941872119]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/File.swift"
+  : [1636391269, 941935539]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/FileIO.swift"
+  : [1636391269, 942036151]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/LifecycleHandler.swift"
+  : [1636391269, 942118167]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/OptionalType.swift"
+  : [1636391269, 942192554]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/RFC1123.swift"
+  : [1636391269, 942300796]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/SocketAddress+Hostname.swift"
+  : [1636391269, 942363262]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Storage.swift"
+  : [1636391269, 942432880]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/String+IsIPAddress.swift"
+  : [1636391269, 942496538]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/Thread.swift"
+  : [1636391269, 942567825]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Utilities/URI.swift"
+  : [1636391269, 942651748]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/RangeResult.swift"
+  : [1636391269, 942797660]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validatable.swift"
+  : [1636391269, 942864894]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validation.swift"
+  : [1636391269, 942939281]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/ValidationKey.swift"
+  : [1636391269, 942999839]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validations.swift"
+  : [1636391269, 943067073]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/ValidationsError.swift"
+  : [1636391269, 943133831]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validator.swift"
+  : [1636391269, 943192958]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/ValidatorResult.swift"
+  : [1636391269, 943263053]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/And.swift"
+  : [1636391269, 943371295]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Case.swift"
+  : [1636391269, 943442821]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/CharacterSet.swift"
+  : [1636391269, 943538665]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Count.swift"
+  : [1636391269, 943618297]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Email.swift"
+  : [1636391269, 943701505]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Empty.swift"
+  : [1636391269, 943768978]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/In.swift"
+  : [1636391269, 943879604]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Nil.swift"
+  : [1636391269, 943942070]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/NilIgnoring.swift"
+  : [1636391269, 944011688]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Not.swift"
+  : [1636391269, 944076538]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Or.swift"
+  : [1636391269, 944140195]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Range.swift"
+  : [1636391269, 944211483]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/URL.swift"
+  : [1636391269, 944272279]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/Validation/Validators/Valid.swift"
+  : [1636391269, 944332122]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/View/Application+Views.swift"
+  : [1636391269, 944423198]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/View/PlaintextRenderer.swift"
+  : [1636391269, 944497585]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/View/Request+View.swift"
+  : [1636391269, 944566249]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/View/View.swift"
+  : [1636391269, 944628000]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/View/ViewRenderer.swift"
+  : [1636391269, 944690465]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/vapor/Sources/Vapor/_Deprecations.swift"
+  : [1636391269, 944757938]

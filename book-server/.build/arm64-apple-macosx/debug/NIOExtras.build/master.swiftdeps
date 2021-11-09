@@ -1,0 +1,33 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "15fcf74aa6cc03d2bafa768baca10d71f32fc6a9a9b2d4ad62e52141a09b8ff8"
+build_start_time: [1636391296, 308120012]
+build_end_time: [1636391297, 936568975]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/DebugInboundEventsHandler.swift"
+  : [1636391272, 78548431]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/DebugOutboundEventsHandler.swift"
+  : [1636391272, 78698635]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/FixedLengthFrameDecoder.swift"
+  : [1636391272, 78777551]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/JSONRPCFraming+ContentLengthHeader.swift"
+  : [1636391272, 78862190]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/JSONRPCFraming.swift"
+  : [1636391272, 78929424]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/LengthFieldBasedFrameDecoder.swift"
+  : [1636391272, 78979969]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/LengthFieldPrepender.swift"
+  : [1636391272, 79044342]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/LineBasedFrameDecoder.swift"
+  : [1636391272, 79107522]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/NIOExtrasError.swift"
+  : [1636391272, 79165935]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/NIOLengthFieldBitLength.swift"
+  : [1636391272, 79337358]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/PCAPRingBuffer.swift"
+  : [1636391272, 79437255]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/QuiescingHelper.swift"
+  : [1636391272, 79531431]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/RequestResponseHandler.swift"
+  : [1636391272, 79603910]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/swift-nio-extras/Sources/NIOExtras/WritePCAPHandler.swift"
+  : [1636391272, 79850196]

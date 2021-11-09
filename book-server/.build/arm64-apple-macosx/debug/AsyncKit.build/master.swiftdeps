@@ -1,0 +1,45 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "15fcf74aa6cc03d2bafa768baca10d71f32fc6a9a9b2d4ad62e52141a09b8ff8"
+build_start_time: [1636391296, 316056013]
+build_end_time: [1636391302, 841145038]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/ConnectionPool/ConnectionPoolError.swift"
+  : [1636391272, 473390102]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/ConnectionPool/ConnectionPoolItem.swift"
+  : [1636391272, 473442077]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/ConnectionPool/ConnectionPoolSource.swift"
+  : [1636391272, 473511219]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/ConnectionPool/EventLoopConnectionPool.swift"
+  : [1636391272, 473590373]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/ConnectionPool/EventLoopGroupConnectionPool.swift"
+  : [1636391272, 473692893]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoop/EventLoop+Flatten.swift"
+  : [1636391272, 473774433]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoop/EventLoop+Future.swift"
+  : [1636391272, 473842144]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Collection+Flatten.swift"
+  : [1636391272, 473929405]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/EventLoopFutureQueue+Sequence.swift"
+  : [1636391272, 473994970]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/EventLoopFutureQueue.swift"
+  : [1636391272, 474069595]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Collection.swift"
+  : [1636391272, 474150180]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Conjunctions.swift"
+  : [1636391272, 474271774]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Optional.swift"
+  : [1636391272, 474343299]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Throwing.swift"
+  : [1636391272, 474403858]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Transform.swift"
+  : [1636391272, 474455833]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Future+Try.swift"
+  : [1636391272, 474509239]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/FutureExtensions.swift"
+  : [1636391272, 474576950]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/FutureOperators.swift"
+  : [1636391272, 474637269]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/EventLoopFuture/Optional+StrictMap.swift"
+  : [1636391272, 474701404]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/async-kit/Sources/AsyncKit/Exports.swift"
+  : [1636391272, 474750995]

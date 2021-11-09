@@ -1,0 +1,17 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "b621fd5633046df513e0dd2e79a03211bf5b1c49c470eee462c55a90a663a78e"
+build_start_time: [1636391301, 685567855]
+build_end_time: [1636391302, 158842086]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/Exports.swift"
+  : [1636391271, 245942592]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/HTTPInitialRequestHandler.swift"
+  : [1636391271, 246001720]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/WebSocket+Connect.swift"
+  : [1636391271, 246057033]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/WebSocket.swift"
+  : [1636391271, 246144771]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/WebSocketClient.swift"
+  : [1636391271, 246232748]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/websocket-kit/Sources/WebSocketKit/WebSocketHandler.swift"
+  : [1636391271, 246294975]

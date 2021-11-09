@@ -1,0 +1,4 @@
+module NIOTestUtils {
+    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/NIOTestUtils.build/NIOTestUtils-Swift.h"
+    requires objc
+}

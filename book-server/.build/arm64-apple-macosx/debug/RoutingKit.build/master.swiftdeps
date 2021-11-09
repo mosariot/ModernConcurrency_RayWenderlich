@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+options: "8f91f5c080ee05dfa082fbbdc06113a444cc9a4781f02ab54a8aa8fd08142ceb"
+build_start_time: [1636391278, 839900970]
+build_end_time: [1636391284, 88186025]
+inputs:
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/routing-kit/Sources/RoutingKit/AnyRouter.swift"
+  : [1636391271, 28587818]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/routing-kit/Sources/RoutingKit/Parameters.swift"
+  : [1636391271, 28661489]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/routing-kit/Sources/RoutingKit/PathComponent.swift"
+  : [1636391271, 28726100]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/routing-kit/Sources/RoutingKit/Router.swift"
+  : [1636391271, 28781890]
+  ? "/Users/mosariot/Local Development/\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435/Modern Concurrency RW/book-server/.build/checkouts/routing-kit/Sources/RoutingKit/TrieRouter.swift"
+  : [1636391271, 28874158]

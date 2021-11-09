@@ -1,0 +1,4 @@
+module COperatingSystem {
+    header "/Users/mosariot/Local Development/Обучение/Modern Concurrency RW/book-server/.build/arm64-apple-macosx/debug/COperatingSystem.build/COperatingSystem-Swift.h"
+    requires objc
+}
