@@ -42,6 +42,8 @@ struct DownloadView: View {
   @State var fileData: Data?
   /// Should display a download activity indicator.
   @State var isDownloadActive = false
+  /// Current download task
+  @State var downloadTask: Task<Void, Error>?
   var body: some View {
     List {
       // Show the details of the selected file and download buttons.
@@ -59,7 +61,17 @@ struct DownloadView: View {
           }
         },
         downloadWithUpdatesAction: {
-          // Download a file with UI progress updates.
+          isDownloadActive = true
+          downloadTask = Task {
+            do {
+              try await SuperStorageModel
+                .$supportsPartialDownloads
+                .withValue(file.name.hasSuffix(".jpeg")) {
+                  fileData = try await model.downloadWithProgress(file: file)
+                }
+            } catch { }
+            isDownloadActive = false
+          }
         },
         downloadMultipleAction: {
           // Download a file in multiple concurrent parts.
@@ -78,12 +90,14 @@ struct DownloadView: View {
     .listStyle(InsetGroupedListStyle())
     .toolbar(content: {
       Button(action: {
+        model.stopDownloads = true
       }, label: { Text("Cancel All") })
         .disabled(model.downloads.isEmpty)
     })
     .onDisappear {
       fileData = nil
       model.reset()
+      downloadTask?.cancel()
     }
   }
 }
