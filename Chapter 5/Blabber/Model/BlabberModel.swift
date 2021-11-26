@@ -45,9 +45,15 @@ class BlabberModel: ObservableObject {
 
   /// Current live updates
   @Published var messages: [Message] = []
+  
+  /// A chat location delegate
+  weak var delegate: ChatLocationDelegate?
 
   /// Shares the current user's address in chat.
   func shareLocation() async throws {
+    let location: CLLocation = try await ChatLocationDelegate().getLocation(caller: self)
+    let address: String = try await AddressEncoder.addressFor(location: location)
+    try await say("📍 \(address)")
   }
 
   /// Does a countdown and sends the message.

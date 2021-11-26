@@ -56,4 +56,23 @@ enum AddressEncoder {
       }
     }
   }
+  
+  /// Converting old-style completionHandler API to async/await style
+  static func addressFor(location: CLLocation) async throws -> String {
+    try await withCheckedThrowingContinuation { continuation in
+      AddressEncoder.addressFor(location: location) { address, error in
+        switch (address, error) {
+        case (nil, let error?):
+          continuation.resume(throwing: error)
+        case (let address?, nil):
+          continuation.resume(returning: address)
+        case (nil, nil):
+          continuation.resume(throwing: "Address encoding failed")
+        case let (address?, error?):
+          continuation.resume(returning: address)
+          print(error)
+        }
+      }
+    }
+  }
 }
