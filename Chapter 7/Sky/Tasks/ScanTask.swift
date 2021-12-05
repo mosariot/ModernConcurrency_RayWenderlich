@@ -30,57 +30,26 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import Foundation
 
-class BlabberTests: XCTestCase {
+/// A single scanning task.
+struct ScanTask: Identifiable {
+  let id: UUID
+  let input: Int
   
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
-  
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+  init(input: Int, id: UUID = UUID()) {
+    self.id = id
+    self.input = input
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
-        }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
-    }
-      .value
+  /// A method that performs the scanning.
+  /// > Note: This is a mock method that just suspends for a second.
+  func run() async -> String {
+    await Task {
+      // Block the thread as a real heavy-computation functon will.
+      Thread.sleep(forTimeInterval: 1)
+    }.value
     
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
+    return "\(input)"
   }
 }

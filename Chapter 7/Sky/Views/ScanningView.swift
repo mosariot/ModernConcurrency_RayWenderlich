@@ -30,57 +30,39 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import SwiftUI
 
-class BlabberTests: XCTestCase {
+/// A view that displays the amount of total, completed, and avg. per second scan tasks.
+struct ScanningView: View {
+  @Binding var total: Int
+  @Binding var completed: Int
+  @Binding var perSecond: Double
+  @Binding var scheduled: Int
   
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
-  
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+  private func colorForAvg(_ num: Int) -> Color {
+    switch num {
+    case 0..<5: return .red
+    case 5..<10: return .yellow
+    case 10...: return .green
+    default: return .gray
+    }
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
-        }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
+  var body: some View {
+    VStack(alignment: .leading) {
+      ProgressView("\(scheduled) scheduled", value: Double(min(scheduled, total)), total: Double(total))
+        .tint(colorForAvg(scheduled))
+        .padding()
+      
+      ProgressView(String(format: "%.2f per sec.", perSecond), value: min(perSecond, 10), total: 10)
+        .tint(colorForAvg(Int(perSecond)))
+        .padding()
+      
+      ProgressView("\(completed) tasks completed", value: min(1.0, Double(completed) / Double(total)))
+        .tint(Color.blue)
+        .padding()
     }
-      .value
-    
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
+    .font(.callout)
+    .padding()
   }
 }

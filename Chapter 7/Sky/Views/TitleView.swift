@@ -30,57 +30,42 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import SwiftUI
 
-class BlabberTests: XCTestCase {
+/// A view that displays a preset text animation.
+struct TitleView: View {
+  /// The title animates when this property is `true`.
+  @Binding var isAnimating: Bool
   
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
+  @State private var title = "s|2 |2k|0 |1y|3"
+  @State private var titleIndex = 0
   
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+  @State private var timer = Timer.publish(every: 0.33, tolerance: 1, on: .main, in: .common)
+    .autoconnect()
+  
+  static private let titleAnimation = [
+    "s|2 |2k|0 |1y|3 |2n|1 |0e|1 |1t|2",
+    "s|2 |2k|2 |0y|1 |3n|2 |1e|0 |1t|1",
+    "s|1 |2k|2 |2y|0 |1n|3 |2e|1 |0t|1",
+    "s|1 |1k|2 |2y|2 |0n|1 |3e|2 |1t|0",
+    "s|0 |1k|1 |2y|2 |2n|0 |1e|3 |2t|1"
+  ]
+  
+  private func updateTitle() {
+    titleIndex += 1
+    if titleIndex >= Self.titleAnimation.count {
+      titleIndex = 0
+    }
+    title = Self.titleAnimation[titleIndex]
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
+  var body: some View {
+    Text(title)
+      .font(.custom("Datalegreya-Gradient", size: 36, relativeTo: .largeTitle))
+      .onReceive(timer) { _ in
+        if isAnimating {
+          self.updateTitle()
         }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
-    }
-      .value
-    
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
+      }
   }
 }

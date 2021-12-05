@@ -30,57 +30,52 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import Foundation
 
-class BlabberTests: XCTestCase {
+class ScanModel: ObservableObject {
+  // MARK: - Private state
+  private var counted = 0
+  private var started = Date()
   
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
+  // MARK: - Public, bindable state
   
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+  /// Currently scheduled for execution tasks.
+  @MainActor @Published var scheduled = 0
+  
+  /// Completed scan tasks per second.
+  @MainActor @Published var countPerSecond: Double = 0
+  
+  /// Completed scan tasks.
+  @MainActor @Published var completed = 0
+  
+  @Published var total: Int
+  
+  @MainActor @Published var isCollaborating = false
+  
+  // MARK: - Methods
+  
+  init(total: Int, localName: String) {
+    self.total = total
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
-        }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
-    }
-      .value
+  func runAllTasks() async throws {
+    started = Date()
+  }
+}
+
+// MARK: - Tracking task progress.
+extension ScanModel {
+  @MainActor
+  private func onTaskCompleted() {
+    completed += 1
+    counted += 1
+    scheduled -= 1
     
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
+    countPerSecond = Double(counted) / Date().timeIntervalSince(started)
+  }
+  
+  @MainActor
+  private func onScheduled() {
+    scheduled += 1
   }
 }

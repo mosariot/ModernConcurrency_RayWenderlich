@@ -30,57 +30,51 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import Foundation
 
-class BlabberTests: XCTestCase {
-  
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
-  
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+class TimeoutTask<Success> {
+  struct TimeoutError: LocalizedError {
+    var errorDescription: String? {
+      return "The operation timed out."
+    }
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
+  let nanoseconds: UInt64
+  let operation: @Sendable () async throws -> Success
+  
+  init(
+    seconds: TimeInterval,
+    operation: @escaping @Sendable () async throws -> Success
+  ) {
+    self.nanoseconds = UInt64(seconds * 1_000_000_000)
+    self.operation = operation
+  }
+  
+  private var continuation: CheckedContinuation<Success, Error>?
+  
+  func cancel() {
+    continuation?.resume(throwing: CancellationError())
+    continuation = nil
+  }
+  
+  var value: Success {
+    get async throws {
+      return try await
+      withCheckedThrowingContinuation { continuation in
+        self.continuation = continuation
+        
+        Task {
+          try await Task.sleep(nanoseconds: nanoseconds)
+          self.continuation?.resume(throwing: TimeoutError())
+          self.continuation = nil
         }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
+        
+        Task {
+          let result = try await operation()
+          self.continuation?.resume(returning: result)
+          self.continuation = nil
         }
+      }
     }
-      .value
-    
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
   }
 }

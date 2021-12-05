@@ -30,57 +30,74 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import SwiftUI
+import Combine
 
-class BlabberTests: XCTestCase {
+@main
+struct SkyApp: App {
+  @ObservedObject
+  var scanModel = ScanModel(total: 20, localName: UIDevice.current.name)
   
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
+  @State var isScanning = false
   
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
-  }
-  
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
-        }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
+  /// The last error message that happened.
+  @State var lastMessage = "" {
+    didSet {
+      isDisplayingMessage = true
     }
-      .value
-    
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
+  }
+  @State var isDisplayingMessage = false
+  
+  var body: some Scene {
+    WindowGroup {
+      NavigationView {
+        VStack {
+          TitleView(isAnimating: $scanModel.isCollaborating)
+          
+          Text("Scanning deep space")
+            .font(.subheadline)
+          
+          ScanningView(
+            total: $scanModel.total,
+            completed: $scanModel.completed,
+            perSecond: $scanModel.countPerSecond,
+            scheduled: $scanModel.scheduled
+          )
+          
+          Button(action: {
+            Task {
+              isScanning = true
+              do {
+                let start = Date().timeIntervalSinceReferenceDate
+                try await scanModel.runAllTasks()
+                let end = Date().timeIntervalSinceReferenceDate
+                lastMessage = String(
+                  format: "Finished %d scans in %.2f seconds.",
+                  scanModel.total,
+                  end - start
+                )
+              } catch {
+                lastMessage = error.localizedDescription
+              }
+              isScanning = false
+            }
+          }, label: {
+            HStack(spacing: 6) {
+              if isScanning { ProgressView() }
+              Text("Engage systems")
+            }
+          })
+            .buttonStyle(.bordered)
+            .disabled(isScanning)
+        }
+        .alert("Message", isPresented: $isDisplayingMessage, actions: {
+          Button("Close", role: .cancel) { }
+        }, message: {
+          Text(lastMessage)
+        })
+        .padding()
+        .statusBar(hidden: true)
+      }
+    }
   }
 }

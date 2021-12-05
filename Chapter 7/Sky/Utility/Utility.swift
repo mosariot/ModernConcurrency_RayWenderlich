@@ -30,57 +30,42 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import XCTest
-@testable import Blabber
+import Foundation
 
-class BlabberTests: XCTestCase {
-  
-  let model: BlabberModel = {
-    let model = BlabberModel()
-    model.username = "test"
-    
-    let testConfiguration = URLSessionConfiguration.default
-    testConfiguration.protocolClasses = [TestURLProtocol.self]
-    
-    model.urlSession = URLSession(configuration: testConfiguration)
-    model.sleep = { try await Task.sleep(nanoseconds: $0 / 1_000_000_000) }
-    return model
-  }()
-  
-  // one time async response
-  func testModelSay() async throws {
-    try await model.say("Hello!")
-    
-    let request = try XCTUnwrap(TestURLProtocol.lastRequest)
-    XCTAssertEqual(request.url?.absoluteString, "http://localhost:8080/chat/say")
-    
-    let httpBody = try XCTUnwrap(request.httpBody)
-    let message = try XCTUnwrap(try? JSONDecoder().decode(Message.self, from: httpBody))
-    XCTAssertEqual(message.message, "Hello!")
+extension Notification.Name {
+  static let response = Notification.Name("response")
+  static let connected = Notification.Name("connected")
+  static let disconnected = Notification.Name("disconnected")
+}
+
+extension String: LocalizedError {
+  public var errorDescription: String? {
+    return self
+  }
+}
+
+extension Task where Success == Never, Failure == Never {
+  /// Suspends the current task for at least the given duration in seconds.
+  /// - Parameter seconds: The sleep duration in seconds.
+  static func sleep(seconds: TimeInterval) async {
+    try? await Task.sleep(nanoseconds: UInt64(seconds * 1_000_000_000))
+  }
+}
+
+actor UnreliableAPI {
+  struct Error: LocalizedError {
+    var errorDescription: String? {
+      return "UnreliableAPI.action(failingEvery:) failed."
+    }
   }
   
-  // over time async responses
-  func testModelCountdown() async throws {
-    async let countdown: Void = model.countdown(to: "Tada!")
-    // wrapped in TimeoutTask for case, when there will be less than 4 requests
-    // usually not required
-    async let messages = TimeoutTask(seconds: 1) {
-      await TestURLProtocol.requests
-        .prefix(4)
-        .reduce(into: []) { result, request in
-          result.append(request)
-        }
-        .compactMap(\.httpBody)
-        .compactMap { data in
-          try? JSONDecoder()
-            .decode(Message.self, from: data)
-            .message
-        }
+  static var counter = 0
+  
+  static func action(failingEvery: Int) throws {
+    counter += 1
+    if counter % failingEvery == 0 {
+      counter = 0
+      throw Error()
     }
-      .value
-    
-    let (messagesResult, _) = try await (messages, countdown)
-    
-    XCTAssertEqual(["3 ...", "2 ...", "1 ...", "🎉 Tada!"], messagesResult)
   }
 }
