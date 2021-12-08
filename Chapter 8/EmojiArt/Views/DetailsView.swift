@@ -31,8 +31,11 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import Accelerate
 
 struct DetailsView: View {
+  @EnvironmentObject var imageLoader: ImageLoader
+  
   let file: ImageFile
   @State var image: UIImage?
 
@@ -62,5 +65,8 @@ struct DetailsView: View {
     }
     .ignoresSafeArea()
     .foregroundColor(.white)
+    .task {
+      image = try? await imageLoader.image(file.url)
+    }
   }
 }
