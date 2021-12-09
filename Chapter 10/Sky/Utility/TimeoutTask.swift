@@ -1,15 +1,15 @@
 /// Copyright (c) 2021 Razeware LLC
-/// 
+///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-/// 
+///
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-/// 
+///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-/// 
+///
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -30,71 +30,51 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-actor ImageLoader: ObservableObject {
-  enum DownloadState {
-    case inProgress(Task<UIImage, Error>)
-    case completed(UIImage)
-    case failed
+class TimeoutTask<Success> {
+  struct TimeoutError: LocalizedError {
+    var errorDescription: String? {
+      return "The operation timed out."
+    }
   }
   
-  private(set) var cache: [String: DownloadState] = [:]
+  let nanoseconds: UInt64
+  let operation: @Sendable () async throws -> Success
   
-  @MainActor private(set) var inMemoryAccess: AsyncStream<Int>?
-  private var inMemoryAccessContinuation: AsyncStream<Int>.Continuation?
-  private var inMemoryAccessCounter = 0 {
-    didSet { inMemoryAccessContinuation?.yield(inMemoryAccessCounter) }
+  init(
+    seconds: TimeInterval,
+    operation: @escaping @Sendable () async throws -> Success
+  ) {
+    self.nanoseconds = UInt64(seconds * 1_000_000_000)
+    self.operation = operation
   }
   
-  func setUp() async {
-    let accessStream = AsyncStream<Int> { continuation in inMemoryAccessContinuation = continuation }
-    await MainActor.run { inMemoryAccess = accessStream }
+  private var continuation: CheckedContinuation<Success, Error>?
+  
+  func cancel() {
+    continuation?.resume(throwing: CancellationError())
+    continuation = nil
   }
   
-  func add(_ image: UIImage, forKey key: String) {
-    cache[key] = .completed(image)
-  }
-  
-  func image(_ serverPath: String) async throws -> UIImage {
-    if let cached = cache[serverPath] {
-      switch cached {
-      case .completed(let image):
-        inMemoryAccessCounter += 1
-        return image
-      case .inProgress(let task):
-        return try await task.value
-      case .failed:
-        throw "Download failed"
+  var value: Success {
+    get async throws {
+      return try await
+      withCheckedThrowingContinuation { continuation in
+        self.continuation = continuation
+        
+        Task {
+          try await Task.sleep(nanoseconds: nanoseconds)
+          self.continuation?.resume(throwing: TimeoutError())
+          self.continuation = nil
+        }
+        
+        Task {
+          let result = try await operation()
+          self.continuation?.resume(returning: result)
+          self.continuation = nil
+        }
       }
     }
-    
-    let download: Task<UIImage, Error> = Task.detached {
-      guard let url = URL(string: "http://localhost:8080".appending(serverPath))
-      else { throw "Could not create the download URL" }
-      print("Download: \(url.absoluteString)")
-      let data = try await URLSession.shared.data(from: url).0
-      return try resize(data, to: CGSize(width: 200, height: 200))
-    }
-    
-    cache[serverPath] = .inProgress(download)
-    
-    do {
-      let result = try await download.value
-      add(result, forKey: serverPath)
-      return result
-    } catch {
-      cache[serverPath] = .failed
-      throw error
-    }
-  }
-  
-  func clear() {
-    cache.removeAll()
-    inMemoryAccessCounter = 0
-  }
-  
-  deinit {
-    inMemoryAccessContinuation?.finish()
   }
 }

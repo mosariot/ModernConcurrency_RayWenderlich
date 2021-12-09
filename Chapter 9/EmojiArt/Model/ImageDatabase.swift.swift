@@ -54,9 +54,7 @@ import UIKit
     
     await imageLoader.setUp()
     
-    let accessStream = AsyncStream<Int> { continuation in
-      onDiskAccessContinuation = continuation
-    }
+    let accessStream = AsyncStream<Int> { continuation in onDiskAccessContinuation = continuation }
     await MainActor.run { onDiskAccess = accessStream }
   }
   
