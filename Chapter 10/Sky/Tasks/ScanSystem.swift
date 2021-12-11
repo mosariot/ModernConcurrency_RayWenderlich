@@ -32,49 +32,27 @@
 
 import Foundation
 
-actor TimeoutTask<Success> {
-  struct TimeoutError: LocalizedError {
-    var errorDescription: String? {
-      return "The operation timed out."
-    }
+actor ScanSystem {
+  let name: String
+  let service: ScanTransport?
+  
+  init(name: String, service: ScanTransport? = nil) {
+    self.name = name
+    self.service = service
   }
   
-  let nanoseconds: UInt64
-  let operation: @Sendable () async throws -> Success
+  private(set) var count = 0
   
-  init(
-    seconds: TimeInterval,
-    operation: @escaping @Sendable () async throws -> Success
-  ) {
-    self.nanoseconds = UInt64(seconds * 1_000_000_000)
-    self.operation = operation
+  func commit() {
+    count += 1
   }
   
-  private var continuation: CheckedContinuation<Success, Error>?
-  
-  func cancel() {
-    continuation?.resume(throwing: CancellationError())
-    continuation = nil
-  }
-  
-  var value: Success {
-    get async throws {
-      return try await
-      withCheckedThrowingContinuation { continuation in
-        self.continuation = continuation
-        
-        Task {
-          try await Task.sleep(nanoseconds: nanoseconds)
-          self.continuation?.resume(throwing: TimeoutError())
-          self.continuation = nil
-        }
-        
-        Task {
-          let result = try await operation()
-          self.continuation?.resume(returning: result)
-          self.continuation = nil
-        }
-      }
+  func run(_ task: ScanTask) async throws -> String {
+    defer { count -= 1 }
+    if let service = service {
+      return try await service.send(task: task, to: name)
+    } else {
+      return try await task.run()
     }
   }
 }

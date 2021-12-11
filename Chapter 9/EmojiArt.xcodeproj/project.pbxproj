@@ -23,7 +23,7 @@
 		9C8AFE1926FCDCB000EC76D3 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8AFE1826FCDCB000EC76D3 /* Utility.swift */; };
 		9CD905E62701BCCB00D77741 /* DiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD905E52701BCCB00D77741 /* DiskStorage.swift */; };
 		9F79ACE72761365B00DAF1A1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79ACE62761365B00DAF1A1 /* ImageLoader.swift */; };
-		9F79ACE92762524800DAF1A1 /* ImageDatabase.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79ACE82762524800DAF1A1 /* ImageDatabase.swift.swift */; };
+		9F79ACE92762524800DAF1A1 /* ImageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79ACE82762524800DAF1A1 /* ImageDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		9C8AFE1826FCDCB000EC76D3 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9CD905E52701BCCB00D77741 /* DiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskStorage.swift; sourceTree = "<group>"; };
 		9F79ACE62761365B00DAF1A1 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		9F79ACE82762524800DAF1A1 /* ImageDatabase.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDatabase.swift.swift; sourceTree = "<group>"; };
+		9F79ACE82762524800DAF1A1 /* ImageDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,7 @@
 				9C11323426FF73CB00571AB3 /* Checksum.swift */,
 				9C659CD22700FDE00048C168 /* DataModels.swift */,
 				9C8AFE1626FCDBA600EC76D3 /* EmojiArtModel.swift */,
-				9F79ACE82762524800DAF1A1 /* ImageDatabase.swift.swift */,
+				9F79ACE82762524800DAF1A1 /* ImageDatabase.swift */,
 				9F79ACE62761365B00DAF1A1 /* ImageLoader.swift */,
 				9C8AFE1826FCDCB000EC76D3 /* Utility.swift */,
 			);
@@ -244,7 +244,7 @@
 				9C11323526FF73CB00571AB3 /* Checksum.swift in Sources */,
 				1839F4B025190F2A00BB00F1 /* AppMain.swift in Sources */,
 				9C8AFE1726FCDBA600EC76D3 /* EmojiArtModel.swift in Sources */,
-				9F79ACE92762524800DAF1A1 /* ImageDatabase.swift.swift in Sources */,
+				9F79ACE92762524800DAF1A1 /* ImageDatabase.swift in Sources */,
 				9C659CD52700FDF90048C168 /* ThumbImage.swift in Sources */,
 				9C55E79D27018D8200C0DF06 /* BottomToolbar.swift in Sources */,
 				9C55E79F27018E8200C0DF06 /* DetailsView.swift in Sources */,

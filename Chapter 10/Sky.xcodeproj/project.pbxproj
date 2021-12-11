@@ -18,6 +18,8 @@
 		9CD5AE7E26A144E50010330C /* ScanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AE7D26A144E50010330C /* ScanningView.swift */; };
 		9CD5AE8126A145030010330C /* ScanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AE8026A145030010330C /* ScanModel.swift */; };
 		9CD5AE8426A186BB0010330C /* ScanTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD5AE8326A186BB0010330C /* ScanTransport.swift */; };
+		9F79ACEB27649F9400DAF1A1 /* ScanSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79ACEA27649F9400DAF1A1 /* ScanSystem.swift */; };
+		9F79ACED2764B07D00DAF1A1 /* Systems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F79ACEC2764B07D00DAF1A1 /* Systems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		9CD5AE7D26A144E50010330C /* ScanningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningView.swift; sourceTree = "<group>"; };
 		9CD5AE8026A145030010330C /* ScanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanModel.swift; sourceTree = "<group>"; };
 		9CD5AE8326A186BB0010330C /* ScanTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanTransport.swift; sourceTree = "<group>"; };
+		9F79ACEA27649F9400DAF1A1 /* ScanSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSystem.swift; sourceTree = "<group>"; };
+		9F79ACEC2764B07D00DAF1A1 /* Systems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Systems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +81,9 @@
 		9C594C4626BD9F790027B2C4 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				9F79ACEA27649F9400DAF1A1 /* ScanSystem.swift */,
 				9C594C4726BD9F880027B2C4 /* ScanTask.swift */,
+				9F79ACEC2764B07D00DAF1A1 /* Systems.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -224,10 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F79ACED2764B07D00DAF1A1 /* Systems.swift in Sources */,
 				9CD5AE8426A186BB0010330C /* ScanTransport.swift in Sources */,
 				9CD220CD26EA00D2007F8A1E /* Utility.swift in Sources */,
 				9CD5AE6E26A13FB10010330C /* SkyApp.swift in Sources */,
 				9CD5AE7E26A144E50010330C /* ScanningView.swift in Sources */,
+				9F79ACEB27649F9400DAF1A1 /* ScanSystem.swift in Sources */,
 				9C594C4826BD9F880027B2C4 /* ScanTask.swift in Sources */,
 				9C934CEF26EA124F0046A00D /* TitleView.swift in Sources */,
 				9C92C33726EA61C600115EC7 /* TimeoutTask.swift in Sources */,

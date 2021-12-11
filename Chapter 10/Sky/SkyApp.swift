@@ -95,6 +95,11 @@ struct SkyApp: App {
         }, message: {
           Text(lastMessage)
         })
+        .toolbar {
+          if scanModel.isConnected {
+            Image(systemName: "link.circle")
+          }
+        }
         .padding()
         .statusBar(hidden: true)
       }

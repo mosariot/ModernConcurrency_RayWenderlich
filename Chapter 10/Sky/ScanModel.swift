@@ -33,14 +33,31 @@
 import Foundation
 
 class ScanModel: ObservableObject {
+  
+  struct ScanTaskError: Error {
+    let underlyingError: Error
+    let task: ScanTask
+  }
   // MARK: - Private state
   private var counted = 0
   private var started = Date()
   
+  // MARK: - SkyNet
+  @MainActor @Published var isConnected = false
+  private var systems: Systems
+  private(set) var service: ScanTransport
+  
   // MARK: - Public, bindable state
   
   /// Currently scheduled for execution tasks.
-  @MainActor @Published var scheduled = 0
+  @MainActor @Published var scheduled = 0 {
+    didSet {
+      Task {
+        let systemCount = await systems.systems.count
+        isCollaborating = scheduled > 0 && systemCount > 1
+      }
+    }
+  }
   
   /// Completed scan tasks per second.
   @MainActor @Published var countPerSecond: Double = 0
@@ -56,34 +73,33 @@ class ScanModel: ObservableObject {
   
   init(total: Int, localName: String) {
     self.total = total
+    let localSystem = ScanSystem(name: localName)
+    systems = Systems(localSystem)
+    service = ScanTransport(localSystem: localSystem)
+    service.taskModel = self
+    systemConnectivityHandler()
   }
   
   func runAllTasks() async throws {
-    /// concurrently run tasks with TaskGroup
-    try await withThrowingTaskGroup(of: Result<String, Error>.self) { [unowned self] group in
-      let batchSize = 4
+    started = Date()
+    try await withThrowingTaskGroup(of: Result<String, ScanTaskError>.self) { [unowned self] group in
       
-      for index in 0..<batchSize {
+      for number in 0..<total {
+        let system = await systems.firstAvailableSystem()
         group.addTask {
-          await self.worker(number: index)
+          await self.worker(number: number, system: system)
         }
       }
-      
-      var index = batchSize
       
       for try await result in group {
         switch result {
         case .success(let result):
           print("Completed: \(result)")
         case .failure(let error):
-          print("Failed: \(error.localizedDescription)")
-        }
-        
-        if index < total {
-          group.addTask { [index] in
-            await self.worker(number: index)
+          group.addTask(priority: .high) {
+            print("Re-run task: \(error.task.input).", "Failed with: \(error.underlyingError)")
+            return await self.worker(number: error.task.input, system: self.systems.localSystem)
           }
-          index += 1
         }
       }
       
@@ -92,18 +108,19 @@ class ScanModel: ObservableObject {
         countPerSecond = 0
         scheduled = 0
       }
+      print("Done.")
     }
   }
   
-  func worker(number: Int) async -> Result<String, Error> {
+  func worker(number: Int, system: ScanSystem) async -> Result<String, ScanTaskError> {
     await onScheduled()
     
     let task = ScanTask(input: number)
     let result: String
     do {
-      result = try await task.run()
+      result = try await system.run(task)
     } catch {
-      return .failure(error)
+      return .failure(.init(underlyingError: error, task: task))
     }
     
     await onTaskCompleted()
@@ -125,5 +142,39 @@ extension ScanModel {
   @MainActor
   private func onScheduled() {
     scheduled += 1
+  }
+}
+
+// MARK: - Connectivity
+extension ScanModel {
+  func systemConnectivityHandler() {
+    Task {
+      for await notification in NotificationCenter.default.notifications(named: .connected) {
+        guard let name = notification.object as? String else { continue }
+        print("[Notification] Connected: \(name)")
+        await systems.addSystem(name: name, service: self.service)
+        Task { @MainActor in
+          isConnected = await systems.systems.count > 1
+        }
+      }
+    }
+    Task {
+      for await notification in NotificationCenter.default.notifications(named: .disconnected) {
+        guard let name = notification.object as? String else { continue }
+        print("[Notification] Disconnected: \(name)")
+        await systems.removeSystem(name: name)
+        Task { @MainActor in
+          isConnected = await systems.systems.count > 1
+        }
+      }
+    }
+  }
+  
+  func run(_ task: ScanTask) async throws -> String {
+    Task { @MainActor in scheduled += 1 }
+    defer {
+      Task { @MainActor in scheduled -= 1 }
+    }
+    return try await systems.localSystem.run(task)
   }
 }
